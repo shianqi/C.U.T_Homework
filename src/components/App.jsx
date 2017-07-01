@@ -44,7 +44,7 @@ class App extends Component {
                 <h1>Commodities</h1>
                 { Commodities }
                 <input className={Style['submit']} type="button" value="Settle Accounts" onClick={account}/>
-                <p>最好打包方案：{this.state.score.join(' ')}</p>
+                <p>打包方案：{this.state.score.join(',')}</p>
             </div>
         )
     }
