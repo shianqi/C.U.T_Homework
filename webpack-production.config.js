@@ -79,7 +79,7 @@ module.exports = {
         }),
         //用模板生成HTML页面
         new HtmlWebpackPlugin({
-            title: 'React NetEast Cloud Music',
+            title: 'C.U.T_Homework',
             bundleName: bundleConfig.vendor.js,
             filename: 'index.html',
             template: resolve(__dirname, 'template/index.tmpl.html')
