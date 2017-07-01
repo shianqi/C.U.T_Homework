@@ -5,7 +5,12 @@
   "main": "index.jsx",
   "scripts": {
     "dev": "webpack-dev-server",
-    "test": "mocha --compilers js:babel-core/register"
+    "test": "mocha --compilers js:babel-core/register",
+    "build": "npm run eslint && npm run build-dll && webpack --config webpack-production.config.js",
+    "build-dll": "npm run clean && webpack --config webpack-dll.config.js",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js src",
+    "clean": "rimraf dist/*",
+    "gh-pages": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,6 +23,7 @@
   },
   "homepage": "https://github.com/shianqi/C.U.T_Homework#readme",
   "devDependencies": {
+    "assets-webpack-plugin": "^3.5.1",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
@@ -30,10 +36,15 @@
     "eslint": "^4.1.1",
     "eslint-plugin-css-modules": "^2.7.2",
     "eslint-plugin-react": "^7.1.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "gh-pages": "^1.0.0",
+    "html-webpack-plugin": "^2.29.0",
     "jasmine": "^2.6.0",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0"
+    "webpack-dev-server": "^2.5.0",
+    "webpack-md5-hash": "0.0.5"
   },
   "dependencies": {
     "react": "^15.6.1",

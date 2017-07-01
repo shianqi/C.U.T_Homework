@@ -34,6 +34,7 @@ module.exports = {
         "no-extra-semi": 2,                         //多余的分号
         "no-unexpected-multiline": 2,               //行尾缺少分号可能导致一些意外情况
         "no-multiple-empty-lines": [1, {"max": 1}], //空行最多不能超过2行
+        "no-constant-condition": 1,
         "default-case": 2,                          //switch语句最后必须有default
         "semi": [2, "never"],                       //语句强制分号结尾
         'generator-star-spacing': 0,
